@@ -1,0 +1,234 @@
+<html>
+<head>
+<title>lab3.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #808080;}
+.s3 { color: #6a8759;}
+.s4 { color: #6897bb;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+lab3.java</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">java.util.Locale</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">java.util.Random</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">java.util.Scanner</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">java.lang.String</span><span class="s0">;</span>
+
+<span class="s0">public class </span><span class="s1">lab3 {</span>
+    <span class="s0">public static void </span><span class="s1">main(String[] args) {</span>
+
+        <span class="s2">// zad1();</span>
+        <span class="s2">//  zad2();</span>
+        <span class="s2">//  zad3();</span>
+        <span class="s2">//zad4();</span>
+        <span class="s2">// zad5();</span>
+        <span class="s2">//  zad6();</span>
+        <span class="s2">//zad7();</span>
+    <span class="s1">}</span>
+
+
+    <span class="s0">public static void </span><span class="s1">printArray(</span><span class="s0">int</span><span class="s1">[] arr) {</span>
+        <span class="s0">for </span><span class="s1">(</span><span class="s0">int </span><span class="s1">a : arr) {</span>
+            <span class="s1">System.out.printf(a + </span><span class="s3">&quot; &quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s1">System.out.println()</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+    <span class="s0">public static int </span><span class="s1">InputInt() {</span>
+        <span class="s1">Scanner input = </span><span class="s0">new </span><span class="s1">Scanner(System.in)</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s3">&quot;Element: &quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s0">int </span><span class="s1">n = input.nextInt()</span><span class="s0">;</span>
+        <span class="s0">return </span><span class="s1">n</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+    <span class="s0">public static double</span><span class="s1">[] generujDouble(</span><span class="s0">int </span><span class="s1">ilosc) {</span>
+        <span class="s0">double </span><span class="s1">tab[] = </span><span class="s0">new double</span><span class="s1">[ilosc]</span><span class="s0">;</span>
+        <span class="s1">Random rand = </span><span class="s0">new </span><span class="s1">Random()</span><span class="s0">;</span>
+        <span class="s0">for </span><span class="s1">(</span><span class="s0">int </span><span class="s1">i = </span><span class="s4">0</span><span class="s0">; </span><span class="s1">i &lt; ilosc</span><span class="s0">; </span><span class="s1">i++) {</span>
+            <span class="s1">tab[i] = rand.nextDouble(</span><span class="s4">26</span><span class="s1">) - </span><span class="s4">10</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">return </span><span class="s1">tab</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+    <span class="s0">public static void </span><span class="s1">printArray(String[] arr) {</span>
+        <span class="s0">for </span><span class="s1">(String a : arr) {</span>
+            <span class="s1">System.out.printf(a + </span><span class="s3">&quot; &quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s1">System.out.println()</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+
+    <span class="s0">public static </span><span class="s1">String InputString() {</span>
+        <span class="s1">Scanner input = </span><span class="s0">new </span><span class="s1">Scanner(System.in)</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s3">&quot;String: &quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">String n = input.nextLine()</span><span class="s0">;</span>
+        <span class="s0">return </span><span class="s1">n</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+    <span class="s0">public static </span><span class="s1">String ReverseString(String str) {</span>
+        <span class="s1">StringBuilder n = </span><span class="s0">new </span><span class="s1">StringBuilder(str)</span><span class="s0">;</span>
+        <span class="s1">n.reverse()</span><span class="s0">;</span>
+        <span class="s0">return </span><span class="s1">n.toString()</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+    <span class="s0">public static void </span><span class="s1">zad1() {</span>
+        <span class="s0">double</span><span class="s1">[] array = </span><span class="s0">new double</span><span class="s1">[</span><span class="s4">20</span><span class="s1">]</span><span class="s0">;</span>
+        <span class="s0">double </span><span class="s1">suma = </span><span class="s4">0</span><span class="s0">, </span><span class="s1">srednia</span><span class="s0">;</span>
+
+        <span class="s1">array = generujDouble(</span><span class="s4">20</span><span class="s1">)</span><span class="s0">;</span>
+
+        <span class="s0">for </span><span class="s1">(</span><span class="s0">int </span><span class="s1">i = </span><span class="s4">0</span><span class="s0">; </span><span class="s1">i &lt; array.length</span><span class="s0">; </span><span class="s1">i++) {</span>
+            <span class="s1">suma += array[i]</span><span class="s0">;</span>
+        <span class="s1">}</span>
+
+        <span class="s0">for </span><span class="s1">(</span><span class="s0">double </span><span class="s1">i : array) {</span>
+            <span class="s1">suma += i</span><span class="s0">;</span>
+        <span class="s1">}</span>
+
+        <span class="s1">srednia = suma / array.length</span><span class="s0">;</span>
+
+        <span class="s1">System.out.println(</span><span class="s3">&quot;Suma: &quot; </span><span class="s1">+ suma)</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s3">&quot;Srednia: &quot; </span><span class="s1">+ srednia)</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+
+    <span class="s0">public static void </span><span class="s1">zad2() {</span>
+        <span class="s0">int </span><span class="s1">tab1[] = </span><span class="s0">new int</span><span class="s1">[</span><span class="s4">5</span><span class="s1">]</span><span class="s0">;</span>
+        <span class="s0">int </span><span class="s1">tab2[] = </span><span class="s0">new int</span><span class="s1">[</span><span class="s4">4</span><span class="s1">]</span><span class="s0">;</span>
+
+        <span class="s0">for </span><span class="s1">(</span><span class="s0">int </span><span class="s1">i = </span><span class="s4">0</span><span class="s0">; </span><span class="s1">i &lt; tab1.length</span><span class="s0">; </span><span class="s1">i++) {</span>
+            <span class="s1">System.out.println(</span><span class="s3">&quot;Podaj &quot; </span><span class="s1">+ (i + </span><span class="s4">1</span><span class="s1">) + </span><span class="s3">&quot; element 1 tablicy&quot;</span><span class="s1">)</span><span class="s0">;</span>
+            <span class="s1">tab1[i] = InputInt()</span><span class="s0">;</span>
+        <span class="s1">}</span>
+
+
+        <span class="s0">for </span><span class="s1">(</span><span class="s0">int </span><span class="s1">i = </span><span class="s4">0</span><span class="s0">; </span><span class="s1">i &lt; tab2.length</span><span class="s0">; </span><span class="s1">i++) {</span>
+            <span class="s1">System.out.println(</span><span class="s3">&quot;Podaj &quot; </span><span class="s1">+ (i + </span><span class="s4">1</span><span class="s1">) + </span><span class="s3">&quot;pierwszy element 2 tablicy&quot;</span><span class="s1">)</span><span class="s0">;</span>
+            <span class="s1">tab2[i] = InputInt()</span><span class="s0">;</span>
+
+        <span class="s1">}</span>
+        <span class="s1">System.out.println(</span><span class="s3">&quot;Co drugi element 1 tablicy&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s0">for </span><span class="s1">(</span><span class="s0">int </span><span class="s1">i = </span><span class="s4">0</span><span class="s0">; </span><span class="s1">i &lt; tab1.length</span><span class="s0">; </span><span class="s1">i++) {</span>
+            <span class="s0">if </span><span class="s1">((i + </span><span class="s4">1</span><span class="s1">) % </span><span class="s4">2 </span><span class="s1">== </span><span class="s4">0</span><span class="s1">) {</span>
+                <span class="s1">System.out.printf(tab1[i] + </span><span class="s3">&quot;</span><span class="s0">\t</span><span class="s3">&quot;</span><span class="s1">)</span><span class="s0">;</span>
+            <span class="s1">}</span>
+        <span class="s1">}</span>
+        <span class="s1">System.out.println(</span><span class="s3">&quot;Co drugi element 2 tablicy&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s0">for </span><span class="s1">(</span><span class="s0">int </span><span class="s1">i = </span><span class="s4">0</span><span class="s0">; </span><span class="s1">i &lt; tab1.length</span><span class="s0">; </span><span class="s1">i++) {</span>
+            <span class="s0">if </span><span class="s1">((i + </span><span class="s4">1</span><span class="s1">) % </span><span class="s4">2 </span><span class="s1">== </span><span class="s4">0</span><span class="s1">) {</span>
+                <span class="s1">System.out.printf(tab2[i] + </span><span class="s3">&quot;</span><span class="s0">\t</span><span class="s3">&quot;</span><span class="s1">)</span><span class="s0">;</span>
+            <span class="s1">}</span>
+
+        <span class="s1">}</span>
+    <span class="s1">}</span>
+
+    <span class="s0">public static void </span><span class="s1">zad3() {</span>
+
+        <span class="s1">{</span>
+            <span class="s1">String tablica[] = {</span><span class="s3">&quot;Ala&quot;</span><span class="s0">, </span><span class="s3">&quot;nie&quot;</span><span class="s0">, </span><span class="s3">&quot;ma&quot;</span><span class="s0">, </span><span class="s3">&quot;kota&quot;</span><span class="s1">}</span><span class="s0">;</span>
+            <span class="s1">System.out.println()</span><span class="s0">;</span>
+
+            <span class="s0">for </span><span class="s1">(String s : tablica</span>
+            <span class="s1">) {</span>
+                <span class="s1">System.out.printf(s.toUpperCase(Locale.ROOT) + </span><span class="s3">&quot; &quot;</span><span class="s1">)</span><span class="s0">;</span>
+            <span class="s1">}</span>
+            <span class="s1">System.out.println()</span><span class="s0">;</span>
+        <span class="s1">}</span>
+    <span class="s1">}</span>
+
+    <span class="s0">public static void </span><span class="s1">zad4() {</span>
+        <span class="s1">String[] tab = </span><span class="s0">new </span><span class="s1">String[</span><span class="s4">4</span><span class="s1">]</span><span class="s0">;</span>
+        <span class="s0">for </span><span class="s1">(</span><span class="s0">int </span><span class="s1">i = </span><span class="s4">0</span><span class="s0">; </span><span class="s1">i &lt; tab.length</span><span class="s0">; </span><span class="s1">i++) {</span>
+            <span class="s1">System.out.println(</span><span class="s3">&quot;Podaj&quot; </span><span class="s1">+ (i + </span><span class="s4">1</span><span class="s1">) + </span><span class="s3">&quot;slowo:&quot;</span><span class="s1">)</span><span class="s0">;</span>
+            <span class="s1">tab[i] = InputString()</span><span class="s0">;</span>
+        <span class="s1">}</span>
+
+
+        <span class="s0">for </span><span class="s1">(</span><span class="s0">int </span><span class="s1">i = </span><span class="s4">0</span><span class="s0">; </span><span class="s1">i &lt; tab.length</span><span class="s0">; </span><span class="s1">i++) {</span>
+            <span class="s1">tab[i] = ReverseString(tab[i])</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s1">System.out.println()</span><span class="s0">;</span>
+        <span class="s0">for </span><span class="s1">(</span><span class="s0">int </span><span class="s1">i = tab.length - </span><span class="s4">1</span><span class="s0">; </span><span class="s1">i &gt;= </span><span class="s4">0</span><span class="s0">; </span><span class="s1">i--) {</span>
+            <span class="s1">System.out.printf(tab[i] + </span><span class="s3">&quot; &quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">}</span>
+
+    <span class="s1">}</span>
+
+
+    <span class="s0">public static void </span><span class="s1">zad5() {</span>
+        <span class="s1">BubbleSort sort = </span><span class="s0">new </span><span class="s1">BubbleSort()</span><span class="s0">;</span>
+
+        <span class="s0">int</span><span class="s1">[] tab = </span><span class="s0">new int</span><span class="s1">[</span><span class="s4">8</span><span class="s1">]</span><span class="s0">;</span>
+        <span class="s0">for </span><span class="s1">(</span><span class="s0">int </span><span class="s1">i = </span><span class="s4">0</span><span class="s0">; </span><span class="s1">i &lt; </span><span class="s4">8</span><span class="s0">; </span><span class="s1">i++) {</span>
+            <span class="s1">System.out.println(</span><span class="s3">&quot;Wpisz &quot; </span><span class="s1">+ (i + </span><span class="s4">1</span><span class="s1">) + </span><span class="s3">&quot;/8 int.&quot;</span><span class="s1">)</span><span class="s0">;</span>
+            <span class="s1">tab[i] = InputInt()</span><span class="s0">;</span>
+        <span class="s1">}</span>
+
+        <span class="s1">sort.bubbleSort(tab)</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s3">&quot;Sorted:&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">printArray(tab)</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+    <span class="s0">public static void </span><span class="s1">zad6() {</span>
+        <span class="s0">int</span><span class="s1">[] tab = </span><span class="s0">new int</span><span class="s1">[</span><span class="s4">5</span><span class="s1">]</span><span class="s0">;</span>
+        <span class="s0">for </span><span class="s1">(</span><span class="s0">int </span><span class="s1">i = </span><span class="s4">0</span><span class="s0">; </span><span class="s1">i &lt; </span><span class="s4">5</span><span class="s0">; </span><span class="s1">i++) {</span>
+            <span class="s1">System.out.println(</span><span class="s3">&quot;Wpisz &quot; </span><span class="s1">+ (i + </span><span class="s4">1</span><span class="s1">) + </span><span class="s3">&quot;/5 int.&quot;</span><span class="s1">)</span><span class="s0">;</span>
+            <span class="s1">tab[i] = InputInt()</span><span class="s0">;</span>
+        <span class="s1">}</span>
+
+        <span class="s0">for </span><span class="s1">(</span><span class="s0">int </span><span class="s1">i = </span><span class="s4">0</span><span class="s0">; </span><span class="s1">i &lt; tab.length</span><span class="s0">; </span><span class="s1">i++) {</span>
+            <span class="s0">int </span><span class="s1">silnia = </span><span class="s4">1</span><span class="s0">;</span>
+            <span class="s0">for </span><span class="s1">(</span><span class="s0">int </span><span class="s1">j = </span><span class="s4">1</span><span class="s0">; </span><span class="s1">j &lt;= tab[i]</span><span class="s0">; </span><span class="s1">j++) {</span>
+                <span class="s1">silnia *= j</span><span class="s0">;</span>
+            <span class="s1">}</span>
+            <span class="s1">tab[i] = silnia</span><span class="s0">;</span>
+        <span class="s1">}</span>
+
+        <span class="s1">printArray(tab)</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+    <span class="s0">public static void </span><span class="s1">zad7() {</span>
+        <span class="s1">String[] tab1 = {</span><span class="s3">&quot;ala&quot;</span><span class="s0">, </span><span class="s3">&quot;ma&quot;</span><span class="s0">, </span><span class="s3">&quot;kota&quot;</span><span class="s1">}</span><span class="s0">;</span>
+        <span class="s1">String[] tab2 = {</span><span class="s3">&quot;ala&quot;</span><span class="s0">, </span><span class="s3">&quot;ma&quot;</span><span class="s0">, </span><span class="s3">&quot;kota&quot;</span><span class="s1">}</span><span class="s0">;</span>
+
+        <span class="s0">boolean </span><span class="s1">isEqual = </span><span class="s0">true;</span>
+
+        <span class="s0">int </span><span class="s1">i = </span><span class="s4">0</span><span class="s0">;</span>
+        <span class="s0">while </span><span class="s1">(isEqual &amp;&amp; i &lt; tab1.length &amp;&amp; i &lt; tab2.length) {</span>
+            <span class="s0">if </span><span class="s1">(!tab1[i].equals(tab2[i])) {</span>
+                <span class="s1">isEqual = </span><span class="s0">false;</span>
+                <span class="s1">i = tab1.length</span><span class="s0">;</span>
+            <span class="s1">}</span>
+            <span class="s1">i++</span><span class="s0">;</span>
+        <span class="s1">}</span>
+
+        <span class="s1">System.out.println(</span><span class="s3">&quot;Arrays:&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">printArray(tab1)</span><span class="s0">;</span>
+        <span class="s1">printArray(tab2)</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s3">&quot;Are arrays equal? - &quot; </span><span class="s1">+ isEqual)</span><span class="s0">;</span>
+    <span class="s1">}</span>
+<span class="s1">}</span>
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+</pre>
+</body>
+</html>
